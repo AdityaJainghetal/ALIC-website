@@ -368,7 +368,7 @@ const MainsTestSeries = ({ selectedCategoryId }) => {
                                 </Card.Body>
                                 <Card.Footer className="bg-white">
                                     <Link
-                                        to={`/testseries/${test._id}`}
+                                        to={`/mainseries/${test._id}`}
                                         className="btn w-100 mb-2"
                                         style={{ background: "#C81A1E", color: "white" }}
                                     >
