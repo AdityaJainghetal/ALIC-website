@@ -4,6 +4,8 @@ import { EventDetailsContent } from "../../components/events/EventDetailsContent
 import { useParams } from "react-router-dom";
 export const EventDetails = () => {
    const { id } = useParams();
+
+   console.log("dfghjfdsdfghjhgfdsdfghjk")
   return (
     <Layout
       breadcrumbTitle={"Event Details"}

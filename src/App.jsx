@@ -268,20 +268,6 @@
 // import OtherCourse from "./components/courses/OtherCourse";
 // import CoursesOne from "./components/courses/CoursesOne";
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import { useLocation } from "react-router-dom";
@@ -336,6 +322,7 @@ import { Foundation } from "./pages/course/Foundation";
 import DetailSection from "./components/fun_facts/WhatsNewDetail";
 import CoursesOne from "./components/courses/CoursesOne";
 import CoursesPage from "./pages/course/CoursesOne";
+
 import FoundationCourses from "./pages/course/FoundationCourse";
 import CourseLayout from "./pages/course/MainLayout";
 import TestSeriesdeatil from "./pages/TestSeries/TestSeriesdeatil";
@@ -343,11 +330,6 @@ import MainSeriesdeatils from "./pages/TestSeries/MainSeriesdeatils";
 import OtherCourse from "./components/courses/OtherCourse";
 import axios from "axios";
 // import { AboutWhy } from "./lib/about/AboutWhy";
-
-
-
-
-
 
 // ✅ Step 1: Map string names from backend to components
 const componentMap = {
@@ -359,7 +341,6 @@ const componentMap = {
   AboutInstitute: <AboutInstitute />,
   AboutWhy: <AboutWhy />,
   Event: <Event />,
-  EventDetails: <EventDetails />,
   TeamMembers: <TeamMembers />,
   TeamMemberDetails: <TeamMemberDetails />,
   Faq: <Faq />,
@@ -369,6 +350,7 @@ const componentMap = {
   Contact: <Contact />,
   Enquiry: <Enquiry />,
   Enroll: <Enroll />,
+  CoursesOne: <CoursesOne/>,
   SyllabusDownload: <SyllabusDownload />,
   JudicialServices: <JudicialServices />,
   DirectorMessage: <DirectorMessage />,
@@ -384,7 +366,7 @@ const componentMap = {
   CoursesSummry: <CoursesSummry />,
   CouresesFull: <CouresesFull />,
   Foundation: <Foundation />,
-  CoursesOne : <CoursesPage/>,
+  CoursesOne: <CoursesPage />,
   DetailSection: <DetailSection />,
   CoursesPage: <CoursesPage />,
   FoundationCourses: <FoundationCourses />,
@@ -392,6 +374,7 @@ const componentMap = {
   TestSeriesdeatil: <TestSeriesdeatil />,
   MainSeriesdeatils: <MainSeriesdeatils />,
   OtherCourse: <OtherCourse />,
+  EventDetails: <EventDetails />,
   Error: <Error />,
 };
 
@@ -423,13 +406,18 @@ function App() {
     <>
       <Routes>
         {/* ✅ Step 3: Render all backend routes */}
-        {rouutesData.map((route, index) => (
-          <Route
-            key={index}
-            path={route.path}
-            element={componentMap[route.element] || <Error />}
-          />
-        ))}
+        {rouutesData.map(
+          (route, index) => (
+            console.log(route, ":KJHKJHKJ"),
+            (
+              <Route
+                key={index}
+                path={route.path}
+                element={componentMap[route.element] || <Error />}
+              />
+            )
+          )
+        )}
 
         {/* ✅ Optional fallback */}
         <Route path="*" element={<Error />} />
