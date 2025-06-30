@@ -52,7 +52,7 @@ export const MarqueeStrike = () => {
     <div className="marquee-container">
       <marquee className="marquee-text" scrollamount="20">
         {discounts.map((discount, index) => (
-          <span key={index} className="strike-text">🔥 {discount.title} 🔥</span>
+          <span key={index} className="strike-text" alt={discount.altText}>🔥 {discount.title} 🔥</span>
         ))}
       </marquee>
     </div>

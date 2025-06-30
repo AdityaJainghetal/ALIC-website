@@ -242,7 +242,7 @@ const DetailSection = () => {
             <div className="col-md-6 mb-4 mb-md-0">
               <img
                 src={whatsNew.images || sampleImage}
-                alt={DOMPurify.sanitize(whatsNew.Coursename) || 'Course Image'}
+                alt={DOMPurify.sanitize(whatsNew.altText) || 'Course Image'}
                 className="img-fluid rounded shadow"
                 style={{ maxHeight: '500px', objectFit: 'cover' }}
               />

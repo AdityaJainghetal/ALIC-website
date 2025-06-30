@@ -147,6 +147,9 @@
 //   );
 // };
 
+
+
+
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useHobble } from "../../lib/hooks/useHobble";
@@ -252,7 +255,7 @@ export const TeamOne = () => {
                 >
                   <img
                     src={Array.isArray(member.images) ? member.images[0] : member.images}
-                    alt={member.Membername}
+                    alt={member.altText}
                     className="h-50 td_radius_10"
                   />
                   <div className="td_team_info td_white_bg">

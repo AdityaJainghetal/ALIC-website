@@ -283,6 +283,7 @@ const BlogList = ({ blogs }) => (
         <div className="col-md-6 mb-4" key={blog._id || index}>
           <BlogItem
             image={blogImage}
+            alt={blog.Alttage}
             date={blogDate}
             author={blog.author || "Unknown Author"}
             title={blog.title || "No Title"}

@@ -915,7 +915,7 @@ export const CoursesAllList = ({ selectedCategoryId }) => {
           <span className="td_card_thumb_in td_radius_10">
             <img 
               src={Array.isArray(course.images) ? course.images[0] : course.images} 
-              alt={course.title} 
+              alt={course.altText} 
               className="course-thumbnail"
               onError={(e) => {
                 e.target.src = 'https://via.placeholder.com/300x200?text=No+Image';

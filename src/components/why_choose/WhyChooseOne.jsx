@@ -51,7 +51,7 @@ export const WhyChooseOne = () => {
             <div className="td_image_box td_style_1">
               <img
                 src={item?.images[0]}
-                alt="why choose us"
+                alt={item?.altText}
                 className="td_image_box_thumb wow fadeInUp"
                 data-wow-duration="1s"
                 data-wow-delay="0.2s"

@@ -217,7 +217,7 @@ console.log("banners",banners)
                     <a href={banner.URL}>
                       <img
                         src={banner.images[0]}
-                        alt={`Slide ${index + 1}`}
+                        alt={banner.altText}
                         style={{
                           width: "100%",
                           height: "100%",

@@ -387,7 +387,8 @@ export const FaqOne = () => {
                     className="td_accordian_body" 
                     style={{ display: activeIndex === index ? 'block' : 'none' }}
                   >
-                    <p>{faq.response}</p>
+                    <p alt={faq.altText} >{faq.response}</p>
+                    
                   </div>
                 </div>
               ))}

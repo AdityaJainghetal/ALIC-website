@@ -268,6 +268,7 @@ export const JudgementDetails = ({ courseId }) => {
     <Layout header={9} footer={1}>
       <JudgementDetailContent 
         id={id}
+        alt={product.altText}
         images={product.images || []} 
         title={product.title || ""}
         courseId={id}

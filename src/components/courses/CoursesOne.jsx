@@ -104,6 +104,7 @@ export const CoursesOne = () => {
                   // src={images[idx % images.length]}
                   src={Array.isArray(course.images) ? course.images[0] : course.images}
                   seats={course.Price || 100}
+                  alt={course.Alttage}
                   semesters={course.Durations || 12}
                   subtitle={course?.category?.name}
                   title={course.Coursename || "Judiciary Examination"}
